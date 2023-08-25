@@ -1,0 +1,16 @@
+a.nav-link {
+    color: #000000 !important;
+}
+
+a.nav-link:hover {
+    text-decoration: line-through;
+}
+
+a.nav-link.active {
+    text-decoration: line-through;
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding-left: 60px !important;
+    padding-right: 0px !important;
+}
