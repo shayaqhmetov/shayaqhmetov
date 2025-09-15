@@ -1,9 +1,11 @@
 # 👋 Hi, I'm Ruslan Shayakhmetov
 
 ## 📝 About Me
+
 A passionate software developer with experience in building web applications, APIs, and automation tools. Interested in open source, cloud technologies, and continuous learning.
 
 ## 💻 Skills & Technologies
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -13,15 +15,18 @@ A passionate software developer with experience in building web applications, AP
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ## 🚀 Projects
+
 - [Project Name 1](link) — short description
 - [Project Name 2](link) — short description
 
 ## 📫 Contacts
+
 [![Email](https://img.shields.io/badge/Email-your.email@example.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:your.email@example.com)
 [![Telegram](https://img.shields.io/badge/Telegram-@yourusername-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://t.me/yourusername)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-your%20profile-0077B5?style=flat-square&logo=linkedin&logoColor=white)](link)
 
 ## 📊 GitHub Stats
+
 <!--
 ![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=shayaqhmetov&show_icons=true&theme=radical)
 -->

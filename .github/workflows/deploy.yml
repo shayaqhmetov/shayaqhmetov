@@ -1,0 +1,51 @@
+name: Build & Deploy CRA to gh-pages
+
+on:
+  push:
+    branches: ["main"] # сборка при пуше в main
+  workflow_dispatch: {} # возможность запустить вручную
+
+# нужно право на запись, чтобы запушить в gh-pages
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          # Для project-site нужен PUBLIC_URL/или "homepage" в package.json.
+          # Для user-site (username.github.io) не требуется.
+          PUBLIC_URL: /
+
+      # SPA-фикс для React Router на GitHub Pages:
+      - name: Add SPA 404 fallback
+        run: cp build/index.html build/404.html
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: build
+          publish_branch: gh-pages
+          enable_jekyll: false # добавит .nojekyll
+          force_orphan: true # новая история на каждой выкладке — без конфликтов
+          # cname: yourdomain.com  # если будет кастомный домен

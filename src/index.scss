@@ -1,30 +1,43 @@
+@import "./variables.scss";
+
+#root {
+  position: relative;
+  background-color: $background-color;
+  color: $default-text-color;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 @font-face {
-  font-family: 'gothampro_black';
-  src: url('./assets/fonts/gothampro/gothampro_black.ttf') format('truetype');
+  font-family: "gothampro_black";
+  src: url("./assets/fonts/gothampro/gothampro_black.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'gothampro_light';
-  src: url('./assets/fonts/gothampro/gothampro_light.ttf') format('truetype');
+  font-family: "gothampro_light";
+  src: url("./assets/fonts/gothampro/gothampro_light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'gothampro_medium';
-  src: url('./assets/fonts/gothampro/gothampro_medium.ttf') format('truetype');
+  font-family: "gothampro_medium";
+  src: url("./assets/fonts/gothampro/gothampro_medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "gothampro_regular";
+  src: url("./assets/fonts/gothampro/gothampro.ttf") format("truetype");
 }
 
 .white {
@@ -33,71 +46,39 @@ code {
 
 .content {
   position: relative;
-  z-index: 2;
 }
 
 h6,
 h2,
-h5 {
+h5,
+h4 {
   margin: 0px;
   padding: 0px;
-  font-family: 'gothampro_medium' !important;
+  font-family: "gothampro_medium";
 }
 
 h1,
 h3 {
-  font-family: "gothampro_black" !important;
+  font-family: "gothampro_black";
 }
 
 a,
 p,
 button,
-.short-text,
 .date,
 .checkbox-container,
 .sortbox-container,
 .reply {
-  font-family: "gothampro_light" !important;
+  font-family: "gothampro_regular";
+  $font-size: $font-size-sm;
 }
 
-.feature-posts {
-  margin-top: 40px;
+h3 {
+  font-size: $font-size-base;
 }
 
-.feature-post,
 .project {
   position: relative;
-}
-
-.circle-btn {
-  display: inline-block;
-  cursor: pointer;
-  padding: 25px;
-  width: 20px;
-  height: 20px;
-  border-radius: 100px;
-  border: 1px solid white;
-  transition: all 300ms ease-in-out;
-  margin-top: 30%;
-}
-
-.circle-btn:hover {
-  background-color: white;
-}
-
-.circle-btn:hover>.play-icon {
-  background: url('./assets/images/play-black.png');
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-  height: 100%;
-  width: 100%;
-  display: block;
-}
-
-.info {
-  padding: 55px;
 }
 
 .action {
@@ -105,7 +86,7 @@ button,
 }
 
 .play-icon {
-  background: url('./assets/images/play.png');
+  background: url("./assets/images/play.png");
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -115,32 +96,8 @@ button,
   display: block;
 }
 
-.darken {
-  position: absolute;
-  background-color: #000000;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.backgroundImg {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  padding: 0px;
-  opacity: 0.7;
-  z-index: 1;
-  transition: all 300ms ease-in-out;
-}
-
-.short-text {
-  overflow: hidden;
+.white-fill {
+  background-color: white;
 }
 
 .vertical-center {
@@ -149,11 +106,10 @@ button,
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  z-index: 1;
 }
 
 h3.title {
-  font-family: "gothampro_medium" !important;
+  font-family: "gothampro_medium";
   padding: 0px;
   margin-top: 30px;
 }
@@ -166,10 +122,6 @@ h3.title {
   margin-top: 20px;
 }
 
-.feature-post .info {
-  padding: 55px 0px 60px 55px;
-}
-
 .outspace {
   overflow: hidden;
   padding: 10px;
@@ -179,7 +131,7 @@ h3.title {
 
 .progress {
   border-radius: 100px;
-  height: .50rem;
+  height: 0.5rem;
   background-color: #949494;
 }
 
@@ -189,10 +141,6 @@ h3.title {
 
 .action button {
   margin-bottom: 10px;
-}
-
-.aboutMe .info {
-  padding: 40px 15px 30px 50px;
 }
 
 .tag {
@@ -221,8 +169,8 @@ h3.title {
 }
 
 .categories {
-  font-family: 'gothampro_medium' !important;
-  margin: -10px 0px !important;
+  font-family: "gothampro_medium";
+  margin: -10px 0px;
   display: inline-block;
   width: 100%;
   height: 25px;
@@ -230,18 +178,18 @@ h3.title {
 }
 
 .categories span {
-  font-family: 'gothampro_light' !important;
+  font-family: "gothampro_light";
 }
 
 .date {
-  font-family: 'gothampro_light';
+  font-family: "gothampro_light";
   font-size: 12px;
 }
 
 input.form-control {
-  font-family: 'gothampro_light' !important;
+  font-family: "gothampro_light";
   border: none;
-  background-color: #E9E9E9;
+  background-color: #e9e9e9;
   padding: 10px 20px;
   font-size: 14px;
   margin-bottom: 10px;
@@ -251,7 +199,6 @@ input.form-control {
   border: none;
   border-radius: 0px;
 }
-
 
 /* The container */
 
@@ -268,7 +215,6 @@ input.form-control {
   user-select: none;
 }
 
-
 /* Hide the browser's default checkbox */
 
 .checkbox-container input {
@@ -279,7 +225,6 @@ input.form-control {
   width: 0;
 }
 
-
 /* Create a custom checkbox */
 
 .checkmark {
@@ -288,23 +233,20 @@ input.form-control {
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
-
 
 /* On mouse-over, add a grey background color */
 
 .checkbox-container:hover input~.checkmark {
-  background-color: #BBBBBB;
+  background-color: #bbbbbb;
 }
-
 
 /* When the checkbox is checked, add a blue background */
 
 .checkbox-container input:checked~.checkmark {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
-
 
 /* Create the checkmark/indicator (hidden when not checked) */
 
@@ -314,13 +256,11 @@ input.form-control {
   display: none;
 }
 
-
 /* Show the checkmark when checked */
 
 .checkbox-container input:checked~.checkmark:after {
   display: block;
 }
-
 
 /* Style the checkmark/indicator */
 
@@ -347,7 +287,7 @@ input.form-control {
   position: absolute;
   left: 2px;
   top: 3px;
-  border: solid #C3C3C3;
+  border: solid #c3c3c3;
   width: 11px;
   height: 11px;
   border-width: 0 2px 2px 0;
@@ -358,7 +298,7 @@ input.form-control {
 }
 
 .sortbox-container.active .sortbox {
-  border: solid #65AFF4;
+  border: solid #65aff4;
   border-width: 0 2px 2px 0;
 }
 
@@ -435,7 +375,7 @@ input.form-control {
   font-size: 14px;
   margin: 5px 0px;
   display: inline-block;
-  font-family: "gothampro_light" !important;
+  font-family: "gothampro_light";
 }
 
 .comment {
@@ -459,7 +399,7 @@ input.form-control {
 }
 
 .comment h5 span {
-  color: #0C85AD;
+  color: #0c85ad;
 }
 
 .heart {
@@ -514,8 +454,8 @@ input.form-control {
   resize: none;
   border: none;
   border-radius: 5px;
-  background-color: #E9E9E9;
-  font-family: "gothampro_light" !important;
+  background-color: #e9e9e9;
+  font-family: "gothampro_light";
   padding: 10px 20px;
 }
 
@@ -535,8 +475,6 @@ input.form-control {
   margin: 10px 0px;
 }
 
-@media only screen and (max-width: 600px) {
-  .info, .aboutMe .info {
-      padding: 20px;
-  }
+.primary-text {
+  color: $primary-color;
 }
