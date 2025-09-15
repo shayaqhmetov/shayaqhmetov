@@ -31,10 +31,9 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          # Для project-site нужен PUBLIC_URL/или "homepage" в package.json.
-          # Для user-site (username.github.io) не требуется.
-          PUBLIC_URL: /
+        # Для user-site (username.github.io) не требуется PUBLIC_URL.
+        # env:
+        #   PUBLIC_URL: /
 
       # SPA-фикс для React Router на GitHub Pages:
       - name: Add SPA 404 fallback
