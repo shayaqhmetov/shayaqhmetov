@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Ruslan Shayakhmetov
+# 👋 Hi, I'm Ruslan Shayakhmetov.
 
 ## 📝 About Me
 
